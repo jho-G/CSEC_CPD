@@ -1,9 +1,9 @@
-n, h = map(int, input().split())
-a = list(map(int, input().split()))
-width = 0
-for height in a:
-    if height > h:
-        width += 2  
+n,h=map(int,input().split())
+f=list(map(int,input().split()))
+count=0
+for i in f:
+    if i>h:
+        count+=2
     else:
-        width += 1  
-print(width)
+        count+=1
+print(count)
