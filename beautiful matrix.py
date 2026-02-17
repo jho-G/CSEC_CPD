@@ -1,25 +1,13 @@
-row = None
-column = None
-entries = 0
-for i in range(5):
-    entry = input().split()
-    entries += 1
-    if "1" in entry:
-        row = entries
-        place = entry.index("1")
-        column = place + 1
-moves = 0
-while row != 3:
-    if row < 3:
-        row += 1
-    else:
-        row -= 1
-    moves += 1
-while column != 3:
-    if column < 3:
-        column += 1
-    else:
-        column -= 1
-    moves += 1
+matrix=[]
+for _ in range(5):
+    row=list(map(int,input().split()))
+    matrix.append(row)
 
+for r in range(5):
+    for c in range(5):
+        if matrix[r][c]==1:
+            row_1,col_1=r,c
+            break
+
+moves=abs(2-row_1)+abs(2-col_1)
 print(moves)
