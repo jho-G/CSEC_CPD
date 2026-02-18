@@ -1,13 +1,13 @@
-n = int(input())
-a = []
-count = 0
-first_magnet = input()
-a.append(first_magnet)
-for i in range(1,n):
-    magnet = input()
-    if a[i-1] == magnet:
-        a.append(magnet)
-    else:
-        count = count + 1
-        a.append(magnet)
-print(count+1)
+n=int(input())
+
+first=input()
+count=1
+
+for _ in range(n-1):
+    next=input()
+    if next!=first:
+        count+=1
+    
+    first=next
+print(count)
+    
