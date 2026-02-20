@@ -1,5 +1,6 @@
-x=int(input())
-y=[int(i) for i in input().split()]
-y.sort()
-for i in y:
-    print(i,end=' ')
+n=int(input())
+columns=list(map(int,input().split()))
+
+columns.sort()
+
+print(*columns)
