@@ -1,13 +1,10 @@
-s = input()
-shortest = 0
-start = 'a'
+n=input()
 
-for i in range(len(s)):
-    forward = abs(ord(s[i])-ord(start))
-    reverse = 26 - forward
-    if forward > reverse:
-        shortest += reverse
-    else:
-        shortest += forward
-    start = s[i]
-print(shortest)
+current="a"
+count=0
+
+for ch in n:
+    diff=abs(ord(ch)-ord(current))
+    moves+=min(diff,26-diff)
+    current=ch
+print(count)
