@@ -1,13 +1,16 @@
 n=int(input())
-a=list(map(int, input().split()))
-c=0
-po=0
-for i in range (n):
-    if a[i]>0:
-        po+=a[i]
-    if a[i]==-1:
-        if po>0:
-            po-=1
+events=list(map(int,input().split()))
+
+police=0
+untreated_crimes=0
+
+for event in events:
+    if event>0:
+        police+=event
+    else:
+        if police>0:
+            police-=1
         else:
-            c+=1
-print(c)
+            untreated_crimes+=1
+print(untreated_crimes)
+
