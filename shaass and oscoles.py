@@ -5,7 +5,7 @@ m = int(input())
 for _ in range(m):
     x, y = map(int, input().split())
     
-    x -= 1  # convert to 0-based index
+    x -= 1  
     
     left_birds = y - 1
     right_birds = a[x] - y
